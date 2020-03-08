@@ -15,7 +15,7 @@ import com.example.appmvvm.view.DetailCountryActivity
 import com.example.appmvvm.view.MainActivity
 
 class CountryViewModel : ViewModel() {
-    
+
     private var countryObservable: CountryObservable = CountryObservable()
     private var countryRecyclerAdapter: CountryRecyclerAdapter? = null
 
