@@ -38,5 +38,7 @@
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
             app:setAdapter="@{model.getRecyclerCountriesAdapter}" />
+
     </LinearLayout>
+
 </layout>

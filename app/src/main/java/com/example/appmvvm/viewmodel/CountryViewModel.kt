@@ -14,10 +14,11 @@ import com.example.appmvvm.view.CountryRecyclerAdapter
 import com.example.appmvvm.view.DetailCountryActivity
 import com.example.appmvvm.view.MainActivity
 
-
 class CountryViewModel : ViewModel() {
+    
     private var countryObservable: CountryObservable = CountryObservable()
     private var countryRecyclerAdapter: CountryRecyclerAdapter? = null
+
     fun callCountries() {
         countryObservable.callCountries()
     }
@@ -37,13 +38,13 @@ class CountryViewModel : ViewModel() {
     }
 
     fun getCountryAt(position: Int): Country? {
-        var countries: List<Country>? = countryObservable.getCountries().value
+        val countries: List<Country>? = countryObservable.getCountries().value
         return countries?.get(position)
     }
 
-
     companion object {
         var mainActivity: MainActivity? = null
+
         @JvmStatic
         @BindingAdapter("svgSrc")
         fun setFlag(imageView: ImageView, uriFlag: String) {
@@ -52,6 +53,7 @@ class CountryViewModel : ViewModel() {
                 .setPlaceHolder(R.drawable.loading_spinner, R.drawable.loading_spinner)
                 .load(uriFlag, imageView)
         }
+
         @JvmStatic
         @BindingAdapter("showDetails")
         fun openDetailsActivity(view: View, country: Country) {
