@@ -32,7 +32,7 @@ class CountryViewModel : ViewModel() {
     }
 
     fun getRecyclerCountriesAdapter(): CountryRecyclerAdapter? {
-        countryRecyclerAdapter = CountryRecyclerAdapter(this, R.layout.item_country)
+        countryRecyclerAdapter = CountryRecyclerAdapter(this)
         return countryRecyclerAdapter
     }
 
