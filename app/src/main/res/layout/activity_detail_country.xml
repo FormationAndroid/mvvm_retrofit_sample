@@ -26,7 +26,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:background="@drawable/title_detail_country"
                 android:fontFamily="serif-monospace"
-                android:text="Name Pais"
+                android:text="Name Country"
                 android:paddingVertical="8dp"
                 android:textAlignment="center"
                 android:textSize="24sp"
@@ -78,14 +78,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/subjectDetail"
-                        android:text="Poblacion : "/>
+                        android:text="Population : "/>
 
                     <TextView
                         android:id="@+id/population_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/resumeDetail"
-                        android:text="poblacion"/>
+                        tools:text="100000"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -116,14 +116,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/subjectDetail"
-                        android:text="Codigo : "/>
+                        android:text="Code : "/>
 
                     <TextView
                         android:id="@+id/code_textview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         style="@style/resumeDetail"
-                        android:text="codigo"/>
+                        android:text="3"/>
                 </LinearLayout>
 
                 <LinearLayout
