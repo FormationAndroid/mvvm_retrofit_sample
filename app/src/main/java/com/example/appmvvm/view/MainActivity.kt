@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         = DataBindingUtil.setContentView(this,R.layout.activity_main)
         countryViewModel= ViewModelProvider(this).get(CountryViewModel::class.java)
 
-        activityMainBinding.model=countryViewModel
+        activityMainBinding.model = countryViewModel
         setupListUpdate()
     }
 

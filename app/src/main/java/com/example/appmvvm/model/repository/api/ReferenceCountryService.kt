@@ -9,6 +9,7 @@ class ReferenceCountryService{
         private const val URL_API= "https://restcountries.eu/rest/v2/"
     }
 
+    // TODO : utiliser un lazy
     fun getClientService(): CountriesService {
         val retrofit = Retrofit.Builder()
             .baseUrl(URL_API)
