@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.appmvvm.R
-import com.example.appmvvm.model.Country
+import com.example.appmvvm.model.repository.models.Country
 import com.example.appmvvm.viewmodel.CountryViewModel
 
 class MainActivity : AppCompatActivity() {

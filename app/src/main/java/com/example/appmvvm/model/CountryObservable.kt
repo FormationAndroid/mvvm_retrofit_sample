@@ -4,6 +4,7 @@ import androidx.databinding.BaseObservable
 import androidx.lifecycle.MutableLiveData
 import com.example.appmvvm.model.repository.CountriesRepository
 import com.example.appmvvm.model.repository.impl.CountriesRepositoryImpl
+import com.example.appmvvm.model.repository.models.Country
 
 class CountryObservable :BaseObservable(){
 

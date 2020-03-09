@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appmvvm.BR
 import com.example.appmvvm.R
 
-import com.example.appmvvm.model.Country
+import com.example.appmvvm.model.repository.models.Country
 import com.example.appmvvm.viewmodel.CountryViewModel
 
 class CountryRecyclerAdapter(private var countryViewModel: CountryViewModel) :

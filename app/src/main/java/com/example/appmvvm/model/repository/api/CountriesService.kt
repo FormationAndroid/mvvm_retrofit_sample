@@ -1,11 +1,10 @@
 package com.example.appmvvm.model.repository.api
 
-import com.google.gson.JsonArray
+import com.example.appmvvm.model.repository.models.Country
 import retrofit2.Call
 import retrofit2.http.GET
 
 interface CountriesService {
-    // TODO : encapsuler le resultat dans une liste d'objet plutôt que dans un JsonArray
     @GET("all")
-    fun listCountries(): Call<JsonArray>
+    fun listCountries(): Call<List<Country>>
 }

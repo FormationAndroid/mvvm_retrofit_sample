@@ -144,8 +144,8 @@
                         style="@style/resumeDetail"
                         android:text="area"/>
                 </LinearLayout>
-            </LinearLayout>
 
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

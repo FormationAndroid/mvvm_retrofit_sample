@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ahmadrosid.svgloader.SvgLoader
 import com.example.appmvvm.R
-import com.example.appmvvm.model.Country
+import com.example.appmvvm.model.repository.models.Country
 import kotlinx.android.synthetic.main.activity_detail_country.*
 
 class DetailCountryActivity : AppCompatActivity() {
@@ -20,12 +20,12 @@ class DetailCountryActivity : AppCompatActivity() {
         SvgLoader.pluck()
             .with(this)
             .setPlaceHolder(R.drawable.loading_spinner,R.drawable.loading_spinner)
-            .load(country.uriFlag, flag_imageview)
+            .load(country.flag, flag_imageview)
         capital_textview.text = country.capital
-        population_textview.text= country.population
-        region_textview.text=country.region
+        population_textview.text= country.population.toString()
+        region_textview.text = country.region
         code_textview.text= country.alpha3Code
-        area_textview.text= country.area
+        area_textview.text= country.area.toString()
 
     }
 }

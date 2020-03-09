@@ -8,8 +8,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ahmadrosid.svgloader.SvgLoader
 import com.example.appmvvm.R
-import com.example.appmvvm.model.Country
 import com.example.appmvvm.model.CountryObservable
+import com.example.appmvvm.model.repository.models.Country
 import com.example.appmvvm.view.CountryRecyclerAdapter
 import com.example.appmvvm.view.DetailCountryActivity
 import com.example.appmvvm.view.MainActivity

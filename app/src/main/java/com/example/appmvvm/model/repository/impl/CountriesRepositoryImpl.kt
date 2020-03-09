@@ -1,13 +1,11 @@
 package com.example.appmvvm.model.repository.impl
 
 import androidx.lifecycle.MutableLiveData
-import com.google.gson.JsonArray
 import com.example.appmvvm.model.repository.CountriesRepository
 import com.example.appmvvm.model.repository.api.ReferenceCountryService
 import retrofit2.Call
 import retrofit2.Response
-import com.google.gson.JsonElement
-import com.example.appmvvm.model.Country
+import com.example.appmvvm.model.repository.models.Country
 import retrofit2.Callback
 
 class CountriesRepositoryImpl : CountriesRepository {
@@ -22,19 +20,18 @@ class CountriesRepositoryImpl : CountriesRepository {
         val apiService = apiAdapter.getClientService()
         val call = apiService.listCountries()
 
-        call.enqueue(object : Callback<JsonArray> {
-            override fun onFailure(call: Call<JsonArray>, t: Throwable) {
+        call.enqueue(object : Callback<List<Country>> {
+            override fun onFailure(call: Call<List<Country>>, t: Throwable) {
                 t.stackTrace
             }
 
-            override fun onResponse(call: Call<JsonArray>, response: Response<JsonArray>) {
-                val countriesJsonArray = response.body()
-                countriesJsonArray?.forEach { jsonElement: JsonElement ->
-                    val jsonObject = jsonElement.asJsonObject
-                    val country = Country(jsonObject)
-                    countriesList?.add(country)
+            override fun onResponse(call: Call<List<Country>>, response: Response<List<Country>>) {
 
+                response.body()?.forEach { country ->
+                    countriesList?.add(country)
                 }
+
+
                 countries.value = countriesList
 
             }
